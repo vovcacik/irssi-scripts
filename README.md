@@ -112,19 +112,15 @@ Also the gathering can be started even inside commands, so something like this w
 
 ### Examples
 
-What you type:
-```
-<you>: Hi, what you guys think about pastebin:Lorem ipsum dolor sit amet, consectetur 
-adipiscing elit. Morbi placerat velit 
-metus, non accumsan nunc placerat et. :pastebin Let me know...
-<him>: That makes no sense dude.
-```
+ - What was typed:  
+10:00 < you> Hi, what you guys think about pastebin:Lorem ipsum dolor sit amet, consectetur  
+adipiscing elit. Morbi placerat velit  
+metus, non accumsan nunc placerat et.:pastebin Let me know...  
+10:00 < jim> That makes no sense dude.
 
-What you and others see:
-```
-<you>: Hi, what you guys think about http://pastebin.com/KyVJGtHz Let me know...
-<him>: That makes no sense dude.
-```
+ - What you and others see:  
+10:00 < you> Hi, what you guys think about http://pastebin.com/KyVJGtHz Let me know...  
+10:00 < jim> That makes no sense dude.
 
 ### Settings
 
@@ -205,12 +201,12 @@ Highlights messages that opens a discussions or occur after period of inactivity
 
 ### Examples
 
-12:00> -!- _you_ [host] has joined **#movies**  
-12:00> you: **Hi, what was the best movie last year?**  
-12:01> you: Anyone?  
-12:01> you: Grrh :(, lets ask Google.  
-12:06> you: **Found it!**  
-12:07> you: Bye.
+12:00 -!- _fan_ [example.com] has joined **#movies**  
+12:00 < fan> **Hi, what was the best movie last year?**  
+12:01 < fan> Anyone?  
+12:01 < fan> Grrh :( lets ask Google.  
+12:06 < fan> **Found it!**  
+12:07 < fan> Bye.
 
 ### Settings
 
@@ -246,16 +242,14 @@ substitution command is hidden from you.
 
 ### Examples
 
-What he types:
+ - What they type:  
+12:00 < a_guy> I just totally fayled there.  
+12:01 < a_guy> s/fayled/failed/  
+12:01 < troll> lol
 
-12:00> a_guy: I just totally fayled there.  
-12:01> a_guy: s/fayled/failed/  
-12:01> another_guy: lol
-
-and what you see:
-
-12:00> a_guy: I just totally **failed** there.  
-12:01> another_guy: lol
+ - and what you see:  
+12:00 < a_guy> I just totally **failed** there.  
+12:01 < troll> lol
 
 ### Settings
 
