@@ -30,14 +30,14 @@ sub on_signal {
 
 	# Get scrolling size and deal with different syntax for this Irssi settings.
 	my $scrolling_step = Irssi::settings_get_str('scroll_page_count') || $height;
-	if ($scrolling_step =~ m|^/|) {
-		# "scroll_page_count" is fraction of page height in fraction syntax.
+	if ($scrolling_step =~ m|^/\.|) {
+		# "scroll_page_count" is fraction of page height in "/.33" syntax.
+		$scrolling_step =~ s|^/\.|0\.|;
+		$scrolling_step = ceil($scrolling_step * $height) || 1;
+	} elsif ($scrolling_step =~ m|^/|) {
+		# "scroll_page_count" is fraction of page height in "/3" syntax.
 		$scrolling_step =~ s|^/|1/|;
 		$scrolling_step = Number::Fraction->new($scrolling_step);
-		$scrolling_step = ceil($scrolling_step * $height) || 1;
-	} elsif ($scrolling_step =~ m|^\.|) {
-		# "scroll_page_count" is fraction of page height in decimal point syntax.
-		$scrolling_step =~ s|^\.|0\.|;
 		$scrolling_step = ceil($scrolling_step * $height) || 1;
 	} elsif ($scrolling_step < 0) {
 		# "scroll_page_count" is negative number of lines (see Irssi bug #254).
