@@ -1,3 +1,15 @@
+Irssi scripts
+=============
+
+1. [translate.pl](#translatepl) - Translates incoming and outgoing messages on a per client basis.
+2. [pastebin_inline.pl](#pastebin_inlinepl) - Pastes anything between start and end tag on pastebin.com - inline.
+3. [context_aware_filter.pl](#context_aware_filterpl) - Filters status messages of those you did not talk to.
+4. [blank_page.pl](#blank_pagepl) - Maintains blank page at the end of each scrollback.
+5. [continuous_scrollback.pl](#continuous_scrollbackpl) - Switch to window with the highest activity level upon bottoming out scrollback.
+6. [highlight_opening_message.pl](#highlight_opening_messagepl) - Highlights messages sent after period of silence on a per client basis.
+7. [clear_screen_on_defocus.pl](#clear_screen_on_defocuspl) - Clears view upon switching to another window.
+8. [fix_typo_for_real.pl](#fix_typo_for_realpl) - Applies vim-like substitution for real.
+
 [translate.pl][]
 ------------
 
