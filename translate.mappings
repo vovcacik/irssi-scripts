@@ -1,0 +1,76 @@
+# This maps language codes as defined by Google Translate API to printable
+# language name and list of possible TLDs.
+# The intended purpose is to be able to translate relatively easily obtainable
+# client TLD and use it to infer appropriate language (code).
+# 
+# Note: some TLDs are directly exchangeable to correct language code (e.g. 
+# Finnish), however some are in conflict (e.g. they don't speak Welsh on 
+# Cyprus).
+# 
+# @see https://developers.google.com/translate/v2/using_rest#language-params
+
+# Language name			code	TLD
+Afrikaans				af		za
+Albanian				sq		al
+Arabic					ar		eg dz ma iq sd sa ye sy tn so ae ly jo lb ps kw mr om qa bh km
+Azerbaijani				az		az
+Basque					eu		
+Bengali					bn		bd
+Belarusian				be		by
+Bulgarian				bg		bg
+Catalan					ca		ad
+Chinese Simplified		zh-CN	cn tw hk mo
+Chinese Traditional		zh-TW	
+Croatian				hr		hr ba
+Czech					cs		cz
+Danish					da		dk fo
+Dutch					nl		nl be aw cw an sx bq sr
+English					en		
+Esperanto				eo		
+Estonian				et		ee
+Filipino				tl		ph
+Finnish					fi		fi ax
+French					fr		fr bj bf bi cm ca cf td ci cd dj ga ht lu mg ml mc ne cg rw sn sc tg vu
+Galician				gl		
+Georgian				ka		ge
+German					de		de at ch li
+Greek					el		gr cy
+Gujarati				gu		
+Haitian Creole			ht		ht
+Hebrew					iw		il
+Hindi					hi		in
+Hungarian				hu		hu
+Icelandic				is		is
+Indonesian				id		id
+Irish					ga		ie
+Italian					it		it sm va
+Japanese				ja		jp
+Kannada					kn		
+Korean					ko		kr kp 
+Latin					la		
+Latvian					lv		lv
+Lithuanian				lt		lt
+Macedonian				mk		mk
+Malay					ms		my bn sg cc
+Maltese					mt		mt
+Norwegian				no		no
+Persian					fa		ir af tj
+Polish					pl		pl
+Portuguese				pt		pt ao br cv tl gw mz st
+Romanian				ro		ro md
+Russian					ru		ru su kz kg
+Serbian					sr		rs
+Slovak					sk		sk
+Slovenian				sl		si
+Spanish					es		es ar bo co cr cu cl do ec sv gq gt hn mx ni pa py pe uy ve
+Swahili					sw		ke tz ug
+Swedish					sv		se
+Tamil					ta		lk
+Telugu					te		
+Thai					th		th
+Turkish					tr		tr
+Ukrainian				uk		ua
+Urdu					ur		pk
+Vietnamese				vi		vn
+Welsh					cy		
+Yiddish					yi		
