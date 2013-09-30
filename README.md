@@ -1,4 +1,4 @@
-translate.pl
+[translate.pl][]
 ------------
 
 ### Syntax
@@ -15,9 +15,9 @@ translate.pl
 Translates incoming and outgoing messages based on translation rules that allows
 fine-grained control over what messages are translated to what languge.
 
-A rule defines who is the _source_ of messages to be translated and what foreign
-language is the source using (_source_lang_). The source can be single client 
-or a channel as a whole. The target language (_target_lang_) is what language
+A rule defines who is the `source` of messages to be translated and what foreign
+language is the source using (`source_lang`). The source can be single client 
+or a channel as a whole. The target language (`target_lang`) is what language
 **you** are using.
 
 This script is using Google Translate API which is not free and you will need
@@ -74,7 +74,7 @@ Note: the colon syntax is used to address particular client and is defined as:
 
 
 
-pastebin_inline.pl
+[pastebin_inline.pl][]
 ------------------
 
 ### Syntax
@@ -88,12 +88,12 @@ the pasted text is automatically replaced with the Pastebin link. What text is
 supposed to be pasted is determined by opening and closing tags. Anything between
 those is sent to Pastebin and everything including the tags is replaced with URL.
 
-All pastes are uploaded anonymously as `unlisted` and expiring in 1 day by default.
+All pastes are uploaded anonymously, unlisted and with expiration of 1 day by default.
 If you got Pastebin account, you can associate the pastes with it by setting your
 user API key - see the _Settings_ section and visit http://pastebin.com/api/api_user_key.html
 
-Warning: once you type opening tag ("pastebin:" by default) you **have to** end
-the gathering phase by closing tag (":pastebin" by default). Everything in between
+Warning: once you type opening tag (`pastebin:` by default) you **have to** end
+the gathering phase by closing tag (`:pastebin` by default). Everything in between
 is just gathered to be uploaded to Pastebin, including commands like `/exit` etc.
 Also the gathering can be started even inside commands, so something like this works:
 `/me just uploaded pastebin:...multiline text...:pastebin Check it out!`
@@ -131,7 +131,7 @@ never miss it, I promise.
 
 
 
-context_aware_filter.pl
+[context_aware_filter.pl][]
 -----------------------
 
 ### Syntax
@@ -153,8 +153,8 @@ you will see if he reconnects, quits or changes his nick.
 
 
 
-blank_page.pl
--------------
+[blank_page.pl][]
+---------------
 
 ### Description
 
@@ -164,26 +164,26 @@ useful if you don't like to read text at the bottom edge of Irssi window or you
 
 
 
-continuous_scrollback.pl
+[continuous_scrollback.pl][]
 ------------------------
 
 ### Description
 
 This script will switch you to the next window with the highest activity level if
-you double tap `Page Down` key (or whatever you got bound for scrolling command)
-at the bottom of scrollback.
+you double tap `Page Down` key (or whatever you got bound for scrolling) at the 
+bottom of scrollback.
 
-There are four activity levels: highlight, (public) message, crap (e.g. status 
-messages), none. If there is more than one window of particular activity level, 
+There are four activity levels: `highlight`, (public) `message`, `crap` (e.g. status 
+messages), `none`. If there is more than one window of particular activity level, 
 you will get switched in the first window in their _natural_ order. If there are
 no windows with any activity, you will end up in `(status)` window.
 
 Note: the scripts tries to prevent switching if you hold the page down key, but
-if it does not do good job for you, tinker the timings at line 42.
+if it does not do good job for you, tinker with the timings at line 42.
 
 
 
-highlight_opening_message.pl
+[highlight_opening_message.pl][]
 ----------------------------
 
 ### Description
@@ -193,12 +193,12 @@ Highlights messages that opens a discussions or occur after period of inactivity
 
 ### Examples
 
-<12:00> -!- _you_ [host] has joined **#movies**
-<12:00> you: **Hi, what was the best movie last year?**
-<12:01> you: Anyone?
-<12:01> you: Grrh :(, lets ask Google.
-<12:06> you: **Found it!**
-<12:07> you: Bye.
+12:00> -!- _you_ [host] has joined **#movies**  
+12:00> you: **Hi, what was the best movie last year?**  
+12:01> you: Anyone?  
+12:01> you: Grrh :(, lets ask Google.  
+12:06> you: **Found it!**  
+12:07> you: Bye.
 
 ### Settings
 
@@ -207,7 +207,7 @@ Highlights messages that opens a discussions or occur after period of inactivity
 
 
 
-clear_screen_on_defocus.pl
+[clear_screen_on_defocus.pl][]
 --------------------------
 
 ### Description
@@ -218,7 +218,7 @@ you got autoscrolling enabled).
 
 
 
-fix_typo_for_real.pl
+[fix_typo_for_real.pl][]
 --------------------
 
 ### Syntax
@@ -235,13 +235,15 @@ substitution command is hidden from you.
 ### Examples
 
 What he types:
-<12:00> a_guy: I just totally fayled there.
-<12:01> a_guy: s/fayled/failed/
-<12:01> another_guy: lol
+
+12:00> a_guy: I just totally fayled there.  
+12:01> a_guy: s/fayled/failed/  
+12:01> another_guy: lol
 
 and what you see:
-<12:00> a_guy: I just totally **failed** there.
-<12:01> another_guy: lol
+
+12:00> a_guy: I just totally **failed** there.  
+12:01> another_guy: lol
 
 ### Settings
 
@@ -249,5 +251,14 @@ and what you see:
    `/set fix_typo_for_real_format %k%7`
 
 
+
+[translate.pl]: translate.pl
+[pastebin_inline.pl]: pastebin_inline.pl
+[context_aware_filter.pl]: context_aware_filter.pl
+[blank_page.pl]: blank_page.pl
+[continuous_scrollback.pl]: continuous_scrollback.pl
+[highlight_opening_message.pl]: highlight_opening_message.pl
+[clear_screen_on_defocus.pl]: clear_screen_on_defocus.pl
+[fix_typo_for_real.pl]: fix_typo_for_real.pl
 
 [color formats]: http://www.irssi.org/documentation/formats
