@@ -60,7 +60,7 @@ sub get_lines_for_nick {
 	my @lines = ();
 	while ($line) {
 		my $text = Irssi::TextUI::Line::get_text($line, 0);
-		push @lines, $line if $text =~ m/^.*?<.?$nick>/;
+		push @lines, $line if $text =~ m/^.*?<.?\Q$nick\E>/;
 		$line = Irssi::TextUI::Line::next($line);
 	}
 	return @lines;
